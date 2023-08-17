@@ -1,0 +1,41 @@
+<!-- This is a parent component which contains all content -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <!-- Form to add new task -->
+      <form (submit)="addTodo(newTodoTitle.value); newTodoTitle.value = ''" class="m-3">
+        <input type="title" class="form-control" placeholder="Enter new task" #newTodoTitle required>
+        <button type="submit" class="btn btn-primary mt-2">Add to the list</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="todoTasks.length > 0; else noTodoTask">
+    <!-- Displays the list of incompleted tasks -->
+    <div class="col-md-6">
+      <h1 class="mt-4">TODO List</h1>
+      <app-todo-item
+        *ngFor="let todoTask of todoTasks; let i = index"
+        [todoObj]="todoTask"
+        (markAsComplete)="markAsComplete(i)"
+        (editTodoTitle)="editTodoTitle(i, $event)"
+        (deleteTodo)="deleteTodo(i)"
+      ></app-todo-item>
+    </div>
+
+    <!-- Displays the list of Completed tasks -->
+    <div class="col-md-6">
+      <h1 class="mt-4">Completed Tasks</h1>
+      <app-completed-tasks
+      *ngFor="let todoTask of todoTasks; let i = index"
+      [todoObj]="todoTask"
+      (deleteTodo)="deleteTodo(i)"
+    ></app-completed-tasks>
+    </div>
+  </div>
+</div>
+
+<!-- Template when there are no tasks -->
+<ng-template #noTodoTask>
+  <h3>No items found.</h3>
+</ng-template>

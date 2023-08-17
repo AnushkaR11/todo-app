@@ -1,0 +1,31 @@
+<!-- This component displays the incompleted tasks list -->
+
+<div class="card mb-3" *ngIf="!todoObj.completed">
+  <div class="card-body row">
+     <div class="ml-2 col-md-9 m-auto">
+      <div [ngClass]="{'text-muted': todoObj.completed}"
+           [hidden]="toEdit" >{{ todoObj.title }}</div>
+      <div [hidden]="!toEdit">
+        <input type="text" class="form-control" required [value]="todoObj.title" (input)="editedTitle = $any($event.target).value">
+        <button class="btn btn-success ml-2" (click)="saveEdit()">Save</button>
+        <button class="btn btn-secondary m-2" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+    <div class="col-md-1 p-0" [hidden]="toEdit">
+      <button class="btn btn-success" (click)="markAsComplete.emit()">
+        <i class="bi bi-check2"></i>
+      </button>
+    </div>
+    <div class="col-md-1 p-0" [hidden]="toEdit">
+      <button
+        class="btn btn-warning color-white" (click)="toEdit = true">
+        <i class="bi bi-pencil-square"></i>
+      </button>
+    </div>
+    <div class="col-md-1 p-0" [hidden]="toEdit">
+      <button class="btn btn-danger" (click)="deleteTodoTask.emit()">
+        <i class="bi bi-trash3"></i>
+      </button>
+    </div>
+  </div>
+</div>

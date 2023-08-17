@@ -1,0 +1,10 @@
+<!-- This component displays the completed tasks list -->
+
+<div class="card mb-3" *ngIf="todoObj.completed">
+  <div class="card-body row">
+    <div class="ml-2 col-md-11 m-auto" >{{ todoObj.title }}</div>
+    <div class="col-md-1 p-0">
+      <button class="btn btn-danger" (click)="deleteTodoTask.emit()"><i class="bi bi-trash3"></i></button>
+    </div>
+  </div>
+</div>
