@@ -2,23 +2,23 @@
   "todos": [
     {
       "title": "Buy groceries",
-      "completed": false,
+      "completed": true,
       "id": 1
     },
     {
+      "title": "Meeting at 4 PM",
+      "completed": false,
+      "id": 4
+    },
+    {
       "title": "Finish project",
-      "completed": true,
-      "id": 2
+      "completed": false,
+      "id": 5
     },
     {
       "title": "Doctors Appointment",
       "completed": false,
-      "id": 3
-    },
-    {
-      "title": "Meeting at 5 PM",
-      "completed": false,
-      "id": 4
+      "id": 6
     }
   ]
 }
