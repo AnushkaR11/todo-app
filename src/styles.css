@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.color-white{
+  color: white;
+}
+
+.col-1 {
+  overflow-wrap: break-word;
+}
+
+.float-right{
+  float: right;
+}

@@ -2,26 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In one terminal, run the following command:
+`json-server --watch db.json`
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+In another terminal, run the following command:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The application is equipped with unit tests and functional tests to ensure its correctness. To run the tests, use the following command:
 
-## Running end-to-end tests
+`ng test`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Assumptions and Decisions
 
-## Further help
+- **Styling Framework:**The application uses Bootstrap for styling and responsive design.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- **Data Persistence:**To create a mock API from where we will fetch data, json-server is used and file which contains the data will be db.json. To run json-server, a command is already provided in Development server section.
+
+- **Design Patterns:** Three design patterns were applied to the application: Singleton for the data service, Observer for handling state changes, and Strategy for dynamic button behavior based on task completion status.
+
+- **Testing Approach:** The application follows a test-driven development approach. Unit tests cover individual components and services.
+
+- **Error Handling:** Error handling is kept minimal for the sake of simplicity. In a production application, comprehensive error handling and user feedback would be implemented.

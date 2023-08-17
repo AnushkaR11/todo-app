@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "title": "Buy groceries",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "title": "Meeting at 4 PM",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "title": "Finish project",
+      "completed": false,
+      "id": 5
+    },
+    {
+      "title": "Doctors Appointment",
+      "completed": false,
+      "id": 6
+    }
+  ]
+}
