@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
+## Install node modules
+Before installing node modules make sure the system has node version **18.17.1** and angular version **16.2.0**. Run the following command for installing node modules:
+npm install
 
 ## Development server
 
