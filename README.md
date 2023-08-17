@@ -19,9 +19,9 @@ The application is equipped with unit tests and functional tests to ensure its c
 
 ## Assumptions and Decisions
 
-- **Styling Framework:**The application uses Bootstrap for styling and responsive design.
+- **Styling Framework:** The application uses Bootstrap for styling and responsive design.
 
-- **Data Persistence:**To create a mock API from where we will fetch data, json-server is used and file which contains the data will be db.json. To run json-server, a command is already provided in Development server section.
+- **Data Persistence:** To create a mock API from where we will fetch data, json-server is used and file which contains the data will be db.json. To run json-server, a command is already provided in Development server section.
 
 - **Design Patterns:** Three design patterns were applied to the application: Singleton for the data service, Observer for handling state changes, and Strategy for dynamic button behavior based on task completion status.
 
