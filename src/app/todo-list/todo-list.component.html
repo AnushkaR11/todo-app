@@ -19,7 +19,7 @@
         [todoObj]="todoTask"
         (markAsComplete)="markAsComplete(i)"
         (editTodoTitle)="editTodoTitle(i, $event)"
-        (deleteTodo)="deleteTodo(i)"
+        (deleteTodoTask)="deleteTodo(i)"
       ></app-todo-item>
     </div>
 
@@ -29,7 +29,7 @@
       <app-completed-tasks
       *ngFor="let todoTask of todoTasks; let i = index"
       [todoObj]="todoTask"
-      (deleteTodo)="deleteTodo(i)"
+      (deleteTodoTask)="deleteTodo(i)"
     ></app-completed-tasks>
     </div>
   </div>

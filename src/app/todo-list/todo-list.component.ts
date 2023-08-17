@@ -39,7 +39,7 @@ export class TodoListComponent {
   // Marks a task as completed.
   markAsComplete(index: number): void {
     this.todoService.updateTodo(this.todoTasks[index].id!, { completed: true }).subscribe(() => {
-      this.toastr.success(`${this.todoTasks[index].title} is masked as completed`, 'Task completed successfully');
+      this.toastr.success(`${this.todoTasks[index].title} is marked as completed`, 'Task completed successfully');
       this.todoTasks[index].completed = true;
     });
   }
@@ -47,6 +47,7 @@ export class TodoListComponent {
   // Edits the title from the current task.
   editTodoTitle(index: number, newTitle: any): void {
     this.todoService.updateTodo(this.todoTasks[index].id!, { title: newTitle }).subscribe(() => {
+      this.toastr.success(`${this.todoTasks[index].title} edited`, 'Task edited successfully');
       this.todoTasks[index].title = newTitle;
     });
   }

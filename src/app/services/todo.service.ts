@@ -10,7 +10,7 @@ export class TodoService {
 // This service is responsible for handling all the CRUD operations for the application using HTTP requests.
 
 // API URL where the data from db.json is stored.
-  private apiUrl = 'http://localhost:3000/todos';
+  apiUrl = 'http://localhost:3000/todos';
 
   constructor(private http: HttpClient) { }
 
