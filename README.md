@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
+## Install node modules
+Before installing node modules make sure the system has node version **18.17.1** and angular version **16.2.0**. Run the following command for installing node modules:
+`npm install`
 
 ## Development server
 
@@ -19,9 +22,9 @@ The application is equipped with unit tests and functional tests to ensure its c
 
 ## Assumptions and Decisions
 
-- **Styling Framework:**The application uses Bootstrap for styling and responsive design.
+- **Styling Framework:** The application uses Bootstrap for styling and responsive design.
 
-- **Data Persistence:**To create a mock API from where we will fetch data, json-server is used and file which contains the data will be db.json. To run json-server, a command is already provided in Development server section.
+- **Data Persistence:** To create a mock API from where we will fetch data, json-server is used and file which contains the data will be db.json. To run json-server, a command is already provided in Development server section.
 
 - **Design Patterns:** Three design patterns were applied to the application: Singleton for the data service, Observer for handling state changes, and Strategy for dynamic button behavior based on task completion status.
 
